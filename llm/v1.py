@@ -2,8 +2,6 @@ import os
 import json
 from langchain.prompts import PromptTemplate
 from openai import OpenAI
-from dotenv import load_dotenv
-import os
 
 BASE_TEMPLATE = """
 You are the agent who will eventually create an ER diagram from the given json with Mermaid notation.
@@ -41,7 +39,7 @@ In the given schema, list only the table name with "sourceId" as a field.
 {schema}
 
 ### output
-- 
+-
 """
 # Do not create relationships with other tables for fields that do not have "sourceId" as an item.
 SECOND_PROMPT_TEMPLATE = """
