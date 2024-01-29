@@ -65,6 +65,12 @@ with st.sidebar:
         value=os.getenv("OPENAI_API_KEY"),
     )
 
+# st.write("sample json schema can be do")
+st.link_button(
+    "Download sample json schema",
+    "https://drive.google.com/drive/folders/1bZnTbBnOq7jJr2Hpsn3CNOIRDVcG7wjm?usp=sharing",
+)
+
 uploaded_file = st.file_uploader("Choose a json file", type="json")
 # user_msg = st.chat_input("ここにメッセージを入力")
 if uploaded_file:
